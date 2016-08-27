@@ -38,10 +38,10 @@ docker run -it --rm -v $(pwd):/var/www farazdagi/php "./vendor/bin/phpunit --ver
 
 Use for any PHP based tools (as base image in your `Dockerfile`):
 
-``
+```
 FROM farazdagi/php:latest
 
 // custom directives
-``
+```
 
 
