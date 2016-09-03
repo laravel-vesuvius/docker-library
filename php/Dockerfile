@@ -1,6 +1,6 @@
 FROM php:alpine
 
-Maintainer Victor Farazdagi <simple.square@gmail.com>
+MAINTAINER Victor Farazdagi <simple.square@gmail.com>
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer 
 
