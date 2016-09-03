@@ -4,7 +4,7 @@
 - Slim (as anything based on Alpine), and easy to use
 - Based on official PHP docker image (`php:alpine`)
 
-[![](https://badge.imagelayers.io/farazdagi/php:latest.svg)](https://imagelayers.io/?images=farazdagi/php:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/farazdagi/php.svg)](https://microbadger.com/images/farazdagi/php "Get your own image badge on microbadger.com")
 
 
 ## Getting the image from Docker Hub
