@@ -1,4 +1,4 @@
-FROM php:alpine
+FROM php:7.1-alpine
 
 MAINTAINER Victor Farazdagi <simple.square@gmail.com>
 

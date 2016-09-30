@@ -1,10 +1,10 @@
 ## Overview
 
-- PHP7 with Composer, on Alpine Linux.
+- PHP7.1 with Composer, on Alpine Linux.
 - Slim (as anything based on Alpine), and easy to use
-- Based on official PHP docker image (`php:alpine`)
+- Based on official PHP docker image (`php:7.1-alpine`)
 
-[![](https://images.microbadger.com/badges/image/farazdagi/php.svg)](https://microbadger.com/images/farazdagi/php "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/farazdagi/php:7.1-alpine.svg)](https://microbadger.com/images/farazdagi/php:7.1-alpine "Get your own image badge on microbadger.com")
 
 
 ## Getting the image from Docker Hub
