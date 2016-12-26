@@ -11,6 +11,10 @@ images = {
         'path': 'php/7.0-alpine',
         'aliases': ['php:alpine', 'php:latest']
     },
+    'php:7.0-nginx-alpine': {
+        'path': 'php/7.0-alpine/nginx',
+        'aliases': ['php:nginx']
+    },
 }
 
 # process aliases
@@ -53,6 +57,8 @@ def build_php(tag):
     for tag in tags:
         docker_build(tag)
 
+    update_badges()
+
 
 def docker_push(tag):
     run('docker push slabs/{}'.format(tag))
@@ -74,6 +80,10 @@ def docker_build(tag):
             for alias in images[tag]['aliases']:
                 run('docker tag slabs/{} slabs/{}'.format(aliases[alias]['tag'], alias))
                 docker_push(alias)
+
+
+def update_badges():
+    run("http post https://hooks.microbadger.com/images/slabs/php/4_8x5bdUZzV8rREs3G9HJLszGCY=")
 
 
 @cli.command(name='list:php')

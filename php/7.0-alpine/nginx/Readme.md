@@ -3,16 +3,16 @@
 - Nginx node with PHP7.0 (FPM) installed, on Alpine Linux.
 - Based on official PHP docker image (`php:7.0-fpm-alpine`)
 - Uses instructions from the official nginx image (`nginx:alpine`)
-- Processes (`php-fpm` and `nginx`) are manager by supervisord
+- Processes (`php-fpm` and `nginx`) are managed by supervisord
 
-[![](https://images.microbadger.com/badges/image/farazdagi/php:7.0-nginx-alpine.svg)](https://microbadger.com/images/farazdagi/php:7.0-nginx-alpine "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/slabs/php:7.0-nginx-alpine.svg)](https://microbadger.com/images/slabs/php:7.0-nginx-alpine "Get your own image badge on microbadger.com")
 
 
 ## Getting the image from Docker Hub
 
 ```
-docker pull farazdagi/php:7.0-nginx-alpine
-docker pull farazdagi/php:nginx
+docker pull slabs/php:7.0-nginx-alpine
+docker pull slabs/php:nginx
 ```
 
 ## Running container
@@ -20,7 +20,7 @@ docker pull farazdagi/php:nginx
 Go to project directory and run:
 
 ```
-docker run -it --rm -v $(pwd):/project:ro -v $(pwd)/site.conf:/etc/nginx/conf.d/default.conf:ro -p 8080:80 farazdagi/php:7.0-nginx-alpine
+docker run -it --rm -v $(pwd):/project:ro -v $(pwd)/site.conf:/etc/nginx/conf.d/default.conf:ro -p 8080:80 slabs/php:7.0-nginx-alpine
 ```
 
 Where `site.conf` (feel free to tune as needed):
@@ -57,7 +57,7 @@ To override `nginx.conf`, pass `-v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro`:
 docker run -it --rm 
   -v $(pwd):/project:ro -v $(pwd)/site.conf:/etc/nginx/conf.d/default.conf:ro 
   -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro
-  -p 8080:80 farazdagi/php:7.0-nginx-alpine
+  -p 8080:80 slabs/php:7.0-nginx-alpine
 
 ```
 
@@ -70,7 +70,7 @@ docker run -it --rm
   -v $(pwd):/project:ro -v $(pwd)/site.conf:/etc/nginx/conf.d/default.conf:ro 
   -v $(pwd)/nginx.conf:/etc/nginx/nginx.conf:ro
   -v $(pwd)/php.ini:/usr/local/etc/php/php.ini:ro
-  -p 8080:80 farazdagi/php:7.0-nginx-alpine
+  -p 8080:80 slabs/php:7.0-nginx-alpine
 
 ```
 
@@ -82,7 +82,7 @@ If you need to configure `php-fpm.conf`, it is located `/usr/local/etc/php-fpm.c
 Use for any PHP based tools (as base image in your `Dockerfile`):
 
 ```
-FROM farazdagi/php:7.0-nginx-alpine
+FROM slabs/php:7.0-nginx-alpine
 
 // custom directives
 ```
